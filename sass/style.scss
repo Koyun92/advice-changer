@@ -1,0 +1,48 @@
+@import '_reset';
+@import '_variables';
+
+body {}
+
+.container {
+    margin: 5rem auto;
+    background-color: $Dark-Grayish-Blue;
+    max-width: 300px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 5rem;
+
+
+
+    &__title {
+        color: $Neon-Green;
+        font-size: .9em;
+        padding: 2rem 0;
+        letter-spacing: .3rem;
+        text-transform: uppercase;
+
+
+    }
+
+    &__divider {
+        &--desktop {
+            display: none;
+        }
+    }
+
+    &__text {
+        color: $Light-Cyan;
+        padding: 0 1rem 1rem;
+    }
+
+    &__img-box {
+        font-size: 0;
+        padding: 2rem;
+        border-radius: 50%;
+        background-color: $Neon-Green;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        cursor: pointer;
+        transform: translate(-50%, -50%);
+    }
+}
