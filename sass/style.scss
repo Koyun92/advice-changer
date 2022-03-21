@@ -1,15 +1,25 @@
 @import '_reset';
 @import '_variables';
+@import '_animations';
 
-body {}
+
+body {
+    padding: 2rem;
+}
+
+.disabled {
+    pointer-events: none;
+}
 
 .container {
     margin: 5rem auto;
     background-color: $Dark-Grayish-Blue;
-    max-width: 300px;
+    max-width: 500px;
+    height: 50vh;
     text-align: center;
     position: relative;
     padding-bottom: 5rem;
+    border-radius: .8rem;
 
 
 
@@ -31,8 +41,11 @@ body {}
 
     &__text {
         color: $Light-Cyan;
-        padding: 0 1rem 1rem;
+        padding: 0 1rem 2rem;
+        font-size: 2.8rem;
     }
+
+
 
     &__img-box {
         font-size: 0;
@@ -44,5 +57,35 @@ body {}
         left: 50%;
         cursor: pointer;
         transform: translate(-50%, -50%);
+
+        &:hover {
+            box-shadow: 0px 0px 42px 7px rgb(27, 182, 92);
+        }
+    }
+}
+
+@media (min-width:800px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+
+    }
+
+    .container {
+        width: 70vw;
+        max-width: 900px;
+        height: 40vh;
+
+        &__divider {
+            &--mobile {
+                display: none;
+            }
+
+            &--desktop {
+                display: inline-block;
+            }
+        }
     }
 }
